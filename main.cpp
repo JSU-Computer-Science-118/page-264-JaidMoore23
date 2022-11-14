@@ -1,4 +1,3 @@
-// write your code here
 // Jaid Moore    J00905675  Due
 //  main.cpp
 //  Programming exercise chapter 4
@@ -15,12 +14,15 @@ int main() {
   int integer;
   cout << "Enter an integer between 1-1000" << endl;
   cin >> integer;
-
-  if (integer == 2 || integer == 3 || integer == 5 || integer == 9 ||
+  if (integer <= 1|| integer > 1000)
+  {
+    cout<< "Out of Bounds" << endl;
+  }
+ else if (integer == 2 || integer == 3 || integer == 5 || integer == 7 ||
       integer == 11 || integer == 13 || integer == 17 ||
       integer == 19 | integer == 23 || integer == 29 || integer == 31)
-    cout << integer << " "
-         << "is a prime number";
+    cout << "Number "<<integer << " "
+         << "is prime!";
   else if (integer % 2 == 0 || integer % 3 == 0 || integer % 5 == 0 ||
            integer % 7 == 0 || integer % 11 == 0 || integer % 13 == 0 ||
            integer % 17 == 0 || integer % 19 == 0 || integer % 23 == 0 ||
@@ -59,11 +61,12 @@ int main() {
     if (integer % 31 == 0) {
       cout << 31 << " ";
     }
-  } else {
-    cout << integer << " "
-         << "is a prime number";
+  }
+  
+  else {
+    cout << "Number " << integer << " "
+         << "is prime";
   }
 
   return 0;
 }
-
